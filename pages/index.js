@@ -24,7 +24,6 @@ export async function getStaticProps({ preview }) {
         }
         allPosts(orderBy: date_DESC, first: 20) {
           title
-          slug
           excerpt
           date
           coverImage {
@@ -85,7 +84,6 @@ export default function Index({ subscription }) {
               coverImage={heroPost.coverImage}
               date={heroPost.date}
               author={heroPost.author}
-              slug={heroPost.slug}
               excerpt={heroPost.excerpt}
             />
           )}
